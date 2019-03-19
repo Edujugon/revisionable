@@ -1,9 +1,10 @@
-<img src="http://venturecraft.com.au/wp-content/uploads/2015/09/REVISIONABLE.png" style="width: 100%" alt="Revisionable" />
+This is a fork of the **abandoned** [VentureCraft/revisionable](https://github.com/VentureCraft/revisionable) project.
 
-[![Laravel 4.x](https://img.shields.io/badge/Laravel-4.x-brightgreen.svg?style=flat-square)](http://laravel.com)
+**Compatible** with L5.8
+
 [![Laravel 5.2](https://img.shields.io/badge/Laravel-5.x-brightgreen.svg?style=flat-square)](http://laravel.com)
-[![Latest Version](https://img.shields.io/github/release/venturecraft/revisionable.svg?style=flat-square)](https://packagist.org/packages/venturecraft/revisionable)
-[![Downloads](https://img.shields.io/packagist/dt/venturecraft/revisionable.svg?style=flat-square)](https://packagist.org/packages/venturecraft/revisionable)
+[![Latest Version](https://img.shields.io/github/release/edujugon/revisionable.svg?style=flat-square)](https://packagist.org/packages/edujugon/revisionable)
+[![Downloads](https://img.shields.io/packagist/dt/edujugon/revisionable.svg?style=flat-square)](https://packagist.org/packages/edujugon/revisionable)
 [![License](http://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](https://tldrlegal.com/license/mit-license)
 
 Wouldn't it be nice to have a revision history for any model in your project, without having to do any work for it. By simply extending revisionable from your model, you can instantly have just that, and be able to display a history similar to this:
@@ -26,12 +27,12 @@ Revisionable can also now be used [as a trait](#the-new-trait-based-implementati
 
 ## Installation
 
-Revisionable is installable via [composer](http://getcomposer.org/doc/00-intro.md), the details are on [packagist, here.](https://packagist.org/packages/venturecraft/revisionable)
+Revisionable is installable via [composer](http://getcomposer.org/doc/00-intro.md), the details are on [packagist, here.](https://packagist.org/packages/edujugon/revisionable)
 
 Add the following to the `require` section of your projects composer.json file:
 
 ```php
-"venturecraft/revisionable": "1.*",
+"edujugon/revisionable": "1.*",
 ```
 
 Run composer update to download the package
@@ -43,17 +44,17 @@ php composer.phar update
 Finally, you'll also need to run migration on the package (Laravel 5.x)
 
 ```
-php artisan migrate --path=vendor/venturecraft/revisionable/src/migrations
+php artisan migrate --path=vendor/edujugon/revisionable/src/migrations
 ```
 
 For Laravel 4.x users:
 ```
-php artisan migrate --package=venturecraft/revisionable
+php artisan migrate --package=edujugon/revisionable
 ```
 
 > If you're going to be migrating up and down completely a lot (using `migrate:refresh`), one thing you can do instead is to copy the migration file from the package to your `app/database` folder, and change the classname from `CreateRevisionsTable` to something like `CreateRevisionTable` (without the 's', otherwise you'll get an error saying there's a duplicate class)
 
-> `cp vendor/venturecraft/revisionable/src/migrations/2013_04_09_062329_create_revisions_table.php app/database/migrations/`
+> `cp vendor/edujugon/revisionable/src/migrations/2013_04_09_062329_create_revisions_table.php app/database/migrations/`
 
 ## Docs
 
